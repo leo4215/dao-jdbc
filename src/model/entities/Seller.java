@@ -1,6 +1,7 @@
 package model.entities;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class Seller implements Serializable {
@@ -54,8 +55,8 @@ public class Seller implements Serializable {
         return birthdate;
     }
 
-    public void setBirthdate(LocalDate birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthdate(Date date) {
+        this.birthdate = date.toLocalDate();
     }
 
     public Double getBaseSalary() {
